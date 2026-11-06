@@ -1,0 +1,15 @@
+{
+  "accountId": "aeb24d5686ed9104117c8ba6c1ef0dd2",
+  "app": "registro-credenziali",
+  "worker": "luki-registro-credenziali-staging",
+  "databaseId": "50f204d4-924b-475d-9e59-fc80c0837250",
+  "databaseName": "luki-registro-credenziali-staging-db",
+  "bucket": "luki-registro-credenziali-staging-files",
+  "accessAppId": "478e8dd3-ea5c-48d3-99de-7b1b33f670b8",
+  "audience": "bc96513216979f9b62453d08688dc2d6016caf682f94439d341cdb5aaa6ebad1",
+  "origin": "https://luki-registro-credenziali-staging.sartori-luca65.workers.dev",
+  "issuer": "https://proud-rain-876d.cloudflareaccess.com",
+  "repository": "sartoriluca65/registro-credenziali",
+  "sourceSha": "f9963edc0682c1238559c6257b18cbd7029659d1",
+  "sourceBase": ""
+}
