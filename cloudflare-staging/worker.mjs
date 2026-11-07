@@ -27,7 +27,10 @@ export async function verifyJWT(token,env,fetcher=fetch,now=Math.floor(Date.now(
  if(!jwk)denied();
  const key=await crypto.subtle.importKey('jwk',jwk,{name:'RSASSA-PKCS1-v1_5',hash:'SHA-256'},false,['verify']);
  if(!await crypto.subtle.verify('RSASSA-PKCS1-v1_5',key,from64(parts[2]),encoder.encode(parts[0]+'.'+parts[1])))denied();
- return {id:await sha256(encoder.encode(claim.iss+'|'+claim.sub)),email:claim.email};
+ if(env.SYNC_SPACE!==undefined&&(typeof env.SYNC_SPACE!=='string'||!/^[a-z0-9-]{1,64}$/.test(env.SYNC_SPACE)))denied(503,'Spazio di prova non valido');
+ // Server-controlled namespace: old archives remain untouched when starting a new trial.
+ const identity=claim.iss+'|'+claim.sub+(env.SYNC_SPACE?'|space:'+env.SYNC_SPACE:'');
+ return {id:await sha256(encoder.encode(identity)),email:claim.email};
 }
 export async function boundedBody(request,max=LIMIT) {
  const size=request.headers.get('content-length');if(size&&(!/^\d+$/.test(size)||Number(size)>max))denied(413,'Dimensione oltre il limite della prova');
