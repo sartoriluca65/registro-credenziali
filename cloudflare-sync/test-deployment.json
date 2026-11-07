@@ -1,0 +1,15 @@
+{
+  "name": "luki-registro-credenziali-keyfix-test",
+  "db": "4e5b942b-5323-477a-bb4c-71ef44dcc89b",
+  "bucket": "luki-registro-credenziali-keyfix-test-files",
+  "accessId": "ef09aaf2-079e-4624-bad5-b65fd5911b17",
+  "aud": "cbc1718d17cd1dc23ea5e92f723dfdc662e579e5765ecef2a34545e2e54355b5",
+  "origin": "https://luki-registro-credenziali-keyfix-test.sartori-luca65.workers.dev",
+  "app": "registro-credenziali",
+  "repo": "sartoriluca65/registro-credenziali",
+  "source_base": "",
+  "source_sha": "f9963edc0682c1238559c6257b18cbd7029659d1",
+  "release_mode": "staging",
+  "compatibility_date": "2026-11-07",
+  "source_directory": ".."
+}
