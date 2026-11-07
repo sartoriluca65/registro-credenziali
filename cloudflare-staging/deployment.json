@@ -12,5 +12,7 @@
   "repository": "sartoriluca65/registro-credenziali",
   "sourceSha": "f9963edc0682c1238559c6257b18cbd7029659d1",
   "sourceBase": "",
-  "syncSpace": "trial-2026-11-07"
+  "syncSpace": "trial-2026-11-07",
+  "mode": "private-live",
+  "release": "2026-11-07.1"
 }
